@@ -7,7 +7,7 @@ const Customer = require("../models/Customer");
 const { auth } = require("../middleware/auth");
 
 const router = express.Router();
-const PUBLIC_ROLES = ["farmer", "b2b", "customer", "admin"];
+const PUBLIC_ROLES = ["farmer", "b2b", "customer"];
 
 const isValidEmail = (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
 const normalizeString = (value) => (typeof value === "string" ? value.trim() : "");
